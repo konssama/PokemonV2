@@ -1,8 +1,9 @@
 from Api.RequestPokemon import requestPokemon
 from Classes.Type import Type
+from Classes.Move import Move
 
 class Pokemon:
-    def __init__(self, name):
+    def __init__(self, name:str):
         self.name = name.title()
         self.response = requestPokemon(name)
         
@@ -21,4 +22,20 @@ class Pokemon:
             self.stats.append(i['base_stat'])
 
         #moves
-        self.moves = "move"
+        self.moves = []
+
+    def __str__(self) -> str:
+        st = ""
+        st += "Name:" + self.name + "\n"
+        st += "Types: "
+        for i in self.types: st += str(i) + "\n"
+        st += "Stats: " + "\n"
+        for i in self.stats: st += str(i) + ","
+        st += "\n"
+        st += "Moves: " + "\n"
+        for i in self.moves: st += str(i) + ","
+        st += "\n"
+
+        st += "------------------------------------------------------------"
+
+        return st
