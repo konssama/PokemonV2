@@ -2,12 +2,13 @@ from PyQt5.QtWidgets import QApplication
 from Gui.BattleScene import BattleScene
 from Classes.Pokemon import Pokemon
 
-app = QApplication([])
+if __name__ == "__main__":
+    app = QApplication([])
 
-player = Pokemon("ekans")
-opponent = Pokemon("pidgey")
+    player = Pokemon("pidgey")
+    opponent = Pokemon("ekans")
 
-window = BattleScene(player, opponent)
-window.show()
+    window = BattleScene(player, opponent)
+    window.show()
 
-app.exec()
+    app.exec_()
