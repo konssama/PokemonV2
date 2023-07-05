@@ -1,2 +1,1 @@
-backgrounds: kWharever on DeviantArt https://www.deviantart.com/kwharever
-https://www.deviantart.com/kwharever/art/Battle-Backgrounds-v-2-FREE-TO-USE-768031287
+Credit to snivy101 for the backgrounds used: https://www.deviantart.com/snivy101/art/Pokemon-B2W2-Battle-Backgrounds-319706977
