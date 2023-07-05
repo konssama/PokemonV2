@@ -1,6 +1,13 @@
+from PyQt5.QtWidgets import QApplication
+from Gui.BattleScene import BattleScene
 from Classes.Pokemon import Pokemon
 
-if __name__ == "__main__":
-    bulbasaur = Pokemon("bulbasaur")
+app = QApplication([])
 
-    print(bulbasaur)
+player = Pokemon("ekans")
+opponent = Pokemon("pidgey")
+
+window = BattleScene(player, opponent)
+window.show()
+
+app.exec()
