@@ -8,27 +8,29 @@ class BattleScene(object):
         self.player = player
         self.opponent = opponent
 
-        self.width = 640
-        self.height = 480
-
         self.scene = QtWidgets.QWidget()
         self.setupUi()
 
     def setupUi(self):
+        self.width = 640
+        self.height = 480
+
         self.scene.setObjectName("BattleScene")
         self.scene.resize(self.width, self.height)
         self.scene.setFixedSize(QtCore.QSize(self.width, self.height))
 
         self.background = QtWidgets.QLabel(self.scene)
-        self.background.setGeometry(QtCore.QRect(-10, -10, 711, 581))
-        self.background.setStyleSheet("background-image: url(./Assets/bg.jpg)")
+        self.background.setGeometry(QtCore.QRect(-10, -10, 711, 551))
+        self.background.setStyleSheet(
+            "background-image: url(./Assets/Backgrounds/grass.png)"
+        )
         self.background.setText("")
-        self.background.setPixmap(QtGui.QPixmap("./Assets/bg.jpg"))
+        self.background.setPixmap(QtGui.QPixmap("./Assets/Backgrounds/grass.png"))
         self.background.setScaledContents(True)
         self.background.setObjectName("background")
 
         self.playerImage = QtWidgets.QLabel(self.scene)
-        self.playerImage.setGeometry(QtCore.QRect(50, 200, 221, 231))
+        self.playerImage.setGeometry(QtCore.QRect(70, 230, 281, 281))
         self.playerImage.setText("")
         self.playerPixmap = QtGui.QPixmap()
         self.playerPixmap.loadFromData(requests.get(self.player.imageBack).content)
@@ -38,7 +40,7 @@ class BattleScene(object):
         self.playerImage.setObjectName("playerImage")
 
         self.opponentImage = QtWidgets.QLabel(self.scene)
-        self.opponentImage.setGeometry(QtCore.QRect(360, 30, 221, 231))
+        self.opponentImage.setGeometry(QtCore.QRect(380, 60, 281, 281))
         self.opponentImage.setText("")
         self.opponentPixmap = QtGui.QPixmap()
         self.opponentPixmap.loadFromData(requests.get(self.opponent.imageFront).content)

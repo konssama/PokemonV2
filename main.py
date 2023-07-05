@@ -5,7 +5,7 @@ from Classes.Pokemon import Pokemon
 if __name__ == "__main__":
     app = QApplication([])
 
-    player = Pokemon("pidgey")
+    player = Pokemon("charizard")
     opponent = Pokemon("ekans")
 
     window = BattleScene(player, opponent)
